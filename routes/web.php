@@ -30,3 +30,4 @@ Route::middleware(['auth:sanctum'])->group(function () {
 });
 
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
+Route::post('/register', [AuthenticatedSessionController::class, 'storeRegister'])->name('register');
