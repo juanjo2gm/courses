@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Course;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\CourseController;
+
 
 class CourseController extends Controller
 {
@@ -45,6 +47,7 @@ class CourseController extends Controller
         $course = Course::with('enrollments')->findOrFail($id); 
         $studentCount = $course->enrollments()->count();
         return view('courses.show', compact('course', 'studentCount'));
+        
     }
 
     // Mostrar el formulario para editar un curso
