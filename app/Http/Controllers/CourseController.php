@@ -81,4 +81,6 @@ class CourseController extends Controller
         $courses = Course::all(); 
         return view('courses.available', compact('courses'));
     }
+
+  
 }

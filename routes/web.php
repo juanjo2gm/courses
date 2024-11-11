@@ -20,6 +20,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
      Route::post('enrollments', [EnrollmentController::class, 'store'])->name('enrollments.store');
      Route::delete('enrollments/{id}', [EnrollmentController::class, 'destroy'])->name('enrollments.destroy');
 
-     // NO FUNCIONA !!! Ruta para ver cursos disponibles
-     Route::get('courses/available', [CourseController::class, 'availableCourses'])->name('courses.available');
+     // Ruta para ver cursos disponibles
+     Route::get('courses/list/available', [CourseController::class, 'availableCourses'])->name('courses.available');
 });
