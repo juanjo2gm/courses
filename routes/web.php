@@ -23,6 +23,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
      // NO FUNCIONA !!! Ruta para ver cursos disponibles
      Route::get('courses/list/available', [CourseController::class, 'availableCourses'])->name('courses.available');
 
+     
 
 
 
