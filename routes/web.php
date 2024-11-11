@@ -23,3 +23,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
      // Ruta para ver cursos disponibles
      Route::get('courses/list/available', [CourseController::class, 'availableCourses'])->name('courses.available');
 });
+
+Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
+ 
