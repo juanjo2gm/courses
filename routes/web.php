@@ -3,10 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\EnrollmentController;
+use App\Http\Controllers\RoleSelectionController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 // Rutas protegidas 
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/', [CourseController::class, 'index'])->name('dashboard'); 
+    Route::get('/role-selection', [RoleSelectionController::class, 'index'])->name('role.selection');
     Route::get('courses', [CourseController::class, 'index'])->name('courses.index'); 
     Route::get('courses/create', [CourseController::class, 'create'])->name('courses.create');
     Route::post('courses', [CourseController::class, 'store'])->name('courses.store');
@@ -24,5 +27,4 @@ Route::middleware(['auth:sanctum'])->group(function () {
      Route::get('courses/list/available', [CourseController::class, 'availableCourses'])->name('courses.available');
 });
 
-
- 
+Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
