@@ -22,7 +22,7 @@
     <div class="container centered">
         <h1>¿Que eres?</h1>
         <div class="btn-group">
-            <a href="#" class="btn btn-primary">Alumno</a>
+            <a href="{{ route('students.index') }}" class="btn btn-primary">Alumno</a>
             <a href="{{ route('courses.index') }}" class="btn btn-secondary">Profesor</a>
         </div>
     </div>

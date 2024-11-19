@@ -5,11 +5,13 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\EnrollmentController;
 use App\Http\Controllers\RoleSelectionController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\StudentController;
 
 // Rutas protegidas 
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/', [CourseController::class, 'index'])->name('dashboard'); 
     Route::get('/role-selection', [RoleSelectionController::class, 'index'])->name('role.selection');
+    Route::get('/students', [StudentController::class, 'index'])->name('students.index');
     Route::get('courses', [CourseController::class, 'index'])->name('courses.index'); 
     Route::get('courses/create', [CourseController::class, 'create'])->name('courses.create');
     Route::post('courses', [CourseController::class, 'store'])->name('courses.store');

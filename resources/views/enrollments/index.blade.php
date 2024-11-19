@@ -2,7 +2,8 @@
 
 
 @section('content')
-    <h1>Cursos Matriculados</h1>
+    <h1>Mis Matriculas</h1>
+    <button onclick="window.history.back();" class="btn btn-secondary mb-3">Volver Atrás</button>
     <ul class="list-group mt-3">
         @foreach ($enrollments as $enrollment)
             <li class="list-group-item d-flex justify-content-between align-items-center">

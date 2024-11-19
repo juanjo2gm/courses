@@ -37,7 +37,7 @@ class EnrollmentController extends Controller
             'course_id' => $request->course_id,
         ]);
 
-        return redirect()->route('enrollments.index');
+        return redirect()->route('students.index');
     }
 
     // Dar de baja al usuario de un curso
