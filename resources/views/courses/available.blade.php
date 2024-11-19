@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-<!-- NO FUNCIONA-->
-
 @section('content')
     <h1>Cursos Disponibles</h1>
     <ul class="list-group mt-3">
